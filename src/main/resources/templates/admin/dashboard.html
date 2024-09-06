@@ -2,7 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/estilos.css}">
     <script th:src="@{/js/scripts.js}"></script>
 </head>
@@ -37,88 +36,10 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Tabela de Feedbacks -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Últimos Feedbacks</h2>
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Usuário</th>
-                            <th>Comentário</th>
-                            <th>Rating</th>
-                            <th>Data</th>
-                        </tr>
-                        </thead>
-                        <tbody id="feedback-table-body">
-                        <!-- Feedbacks serão inseridos aqui via JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
 
-<script>
-    function formatDate(dateString) {
-        const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-        return new Date(dateString).toLocaleDateString('pt-BR', options);
-    }
-
-    function fetchFeedbacks() {
-        console.log('Fetching feedbacks...');
-
-        fetch('https://expi-e7219-default-rtdb.firebaseio.com/feedback.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erro na resposta da API');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Dados recebidos:', data);
-
-                const tableBody = document.getElementById('feedback-table-body');
-                tableBody.innerHTML = '';
-
-                if (data) {
-                    Object.keys(data).forEach(key => {
-                        const feedback = data[key];
-
-                        if (feedback && feedback.id && feedback.usuario && feedback.comentario && feedback.rating && feedback.data) {
-                            const formattedDate = formatDate(feedback.data);
-
-                            const row = document.createElement('tr');
-
-                            row.innerHTML = `
-                                <td>${feedback.id}</td>
-                                <td>${feedback.usuario}</td>
-                                <td>${feedback.comentario}</td>
-                                <td>${feedback.rating}</td>
-                                <td>${formattedDate}</td>
-                            `;
-
-                            tableBody.appendChild(row);
-                        } else {
-                            console.warn('Feedback inválido ou propriedades ausentes:', feedback);
-                        }
-                    });
-                } else {
-                    console.log('Nenhum feedback encontrado.');
-                }
-            })
-            .catch(error => {
-                console.error('Erro ao buscar feedbacks:', error);
-            });
-    }
-
-    // Chama a função para buscar os feedbacks quando a página carrega
-    window.onload = fetchFeedbacks;
-</script>
 
 </body>
 </html>

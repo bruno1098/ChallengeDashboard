@@ -14,11 +14,11 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorize -> authorize
-                        .anyRequest().permitAll()  // Permite que todos acessem todas as rotas
+                        .anyRequest().permitAll()
                 )
-                .csrf(csrf -> csrf.disable())  // Desabilita proteção CSRF para simplificação (se necessário)
-                .formLogin().disable()  // Desativa a página de login
-                .httpBasic().disable();  // Desativa a autenticação básica HTTP (se habilitada)
+                .csrf(csrf -> csrf.disable())
+                .formLogin().disable()
+                .httpBasic().disable();
 
         return http.build();
     }

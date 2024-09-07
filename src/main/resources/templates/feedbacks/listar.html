@@ -39,7 +39,6 @@
         </tr>
         </thead>
         <tbody id="feedback-table-body">
-        <!-- Itera sobre os feedbacks e exibe diretamente na página -->
         <tr th:each="feedback : ${feedbacks}">
             <td th:text="${feedback.id}"></td>
             <td th:text="${feedback.usuario.nome}"></td>
@@ -47,7 +46,6 @@
             <td th:text="${feedback.nota}"></td>
             <td th:text="${#temporals.format(feedback.data, 'dd/MM/yyyy HH:mm')}"></td>
             <td>
-                <!-- Botão Editar: abre o popup de edição -->
                 <div class="feedback-actions">
                     <button class="btn btn-warning btn-sm"
                             th:data-id="${feedback.id}"
@@ -57,7 +55,6 @@
                             onclick="openEditPopup(this)">
                         <i class="fas fa-edit"></i> Editar
                     </button>
-                    <!-- Botão Deletar -->
                     <a th:href="@{'/feedbacks/deletar/' + ${feedback.id}}"
                        class="btn btn-danger btn-sm"
                        onclick="return confirm('Tem certeza que deseja deletar este feedback?');">
@@ -71,14 +68,12 @@
     </table>
 </div>
 
-<!-- Popup de edição de feedback -->
 <div id="editFeedbackPopup" class="popup" style="display:none;">
     <div class="popup-content">
         <span class="close-btn" onclick="closeEditPopup()">&times;</span>
         <h2>Editar Feedback</h2>
-        <!-- Formulário de edição -->
         <form id="editFeedbackForm" method="post">
-            <input type="hidden" id="feedbackId" name="id"> <!-- O ID do feedback -->
+            <input type="hidden" id="feedbackId" name="id">
             <div>
                 <label for="descricao">Comentário:</label>
                 <textarea id="editDescricao" name="descricao" required></textarea>
@@ -99,12 +94,9 @@
     </div>
 </div>
 
-<!-- Botão para exibir o gráfico -->
 <div class="chart-button-container">
     <button id="showChartButton">Exibir Gráfico de Ratings</button>
 </div>
-
-<!-- Popup para exibir o gráfico -->
 <div id="chartPopup" class="popup" style="display:none;">
     <div class="popup-content">
         <span class="close-btn" onclick="closeChartPopup()">&times;</span>
@@ -115,18 +107,15 @@
 
 <script>
     function openEditPopup(button) {
-        // Recuperar os valores do botão clicado
         var id = button.getAttribute('data-id');
         var descricao = button.getAttribute('data-descricao');
         var nota = button.getAttribute('data-nota');
         var usuarioId = button.getAttribute('data-usuario-id');
 
-        // Preencher os campos do popup com os valores do feedback selecionado
         document.getElementById('feedbackId').value = id;
         document.getElementById('editDescricao').value = descricao;
         document.getElementById('editNota').value = nota;
 
-        // Selecionar o usuário correto no campo de seleção
         const selectElement = document.getElementById('editUsuario');
         for (let i = 0; i < selectElement.options.length; i++) {
             if (selectElement.options[i].value == usuarioId) {
@@ -135,10 +124,8 @@
             }
         }
 
-        // Definir a ação do formulário para o envio correto com POST
         document.getElementById('editFeedbackForm').action = '/feedbacks/editar/' + id;
 
-        // Exibir o popup de edição
         document.getElementById('editFeedbackPopup').style.display = 'flex';
     }
 
@@ -150,25 +137,22 @@
         document.getElementById('chartPopup').style.display = 'none';
     }
 
-    // Exibe o popup com o gráfico quando o botão for clicado
     document.getElementById('showChartButton').addEventListener('click', function() {
         document.getElementById('chartPopup').style.display = 'flex';
         generateChart();  // Gera o gráfico quando o botão é clicado
     });
 
-    // Função para deletar feedback via confirmação
     function deleteFeedback(id) {
         if (confirm('Tem certeza que deseja deletar este feedback?')) {
             window.location.href = '/feedbacks/deletar/' + id;
         }
     }
 
-    // Função para gerar o gráfico com Chart.js
     function generateChart() {
         const ctx = document.getElementById('feedbackChart').getContext('2d');
         const labels = ['Neutro', 'Bom', 'Ruim', 'Insatisfeito'];
         const data = [
-            10, 5, 3, 2  // Exemplo de dados
+            10, 5, 3, 2
         ];
 
         new Chart(ctx, {
@@ -179,10 +163,10 @@
                     label: 'Quantidade de Feedbacks',
                     data: data,
                     backgroundColor: [
-                        'rgba(75, 192, 192, 0.2)', // Neutro
-                        'rgba(54, 162, 235, 0.2)', // Bom
-                        'rgba(255, 99, 132, 0.2)', // Ruim
-                        'rgba(255, 159, 64, 0.2)'  // Insatisfeito
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
                     ],
                     borderColor: [
                         'rgba(75, 192, 192, 1)',
@@ -203,7 +187,6 @@
         });
     }
 
-    // Exibe os feedbacks já carregados via Thymeleaf
     window.onload = function() {
         console.log("Feedbacks carregados via Thymeleaf");
     }

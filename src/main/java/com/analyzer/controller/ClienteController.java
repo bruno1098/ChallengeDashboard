@@ -18,7 +18,7 @@ public class ClienteController {
     @GetMapping("/clientes")
     public String listarClientes(Model model) {
         model.addAttribute("clientes", clienteService.listarTodos());
-        return "clientes/clientes";  // Corrija aqui para o nome correto do template
+        return "clientes/clientes";
     }
 
     @GetMapping("/clientes/novo")

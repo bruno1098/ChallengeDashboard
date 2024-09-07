@@ -30,12 +30,10 @@ public class FeedbackService {
         feedbackRepository.deleteById(id);
     }
 
-    // Método para contar o número total de feedbacks
     public long count() {
         return feedbackRepository.count();
     }
 
-    // Método para obter os feedbacks mais recentes
     public List<Feedback> findRecentFeedbacks() {
         return feedbackRepository.findTop10ByOrderByDataDesc();
     }

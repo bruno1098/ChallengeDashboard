@@ -14,17 +14,14 @@ public class ClienteService {
     @Autowired
     private ClienteRepository clienteRepository;
 
-    // Método para salvar ou atualizar um Cliente
     public Cliente salvar(Cliente cliente) {
         return clienteRepository.save(cliente);
     }
 
-    // Método para contar o número total de clientes
     public long count() {
         return clienteRepository.count();
     }
 
-    // Outros métodos do serviço...
     public List<Cliente> listarTodos() {
         return clienteRepository.findAll();
     }

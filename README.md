@@ -89,8 +89,8 @@ Contribuindo diretamente para a tomada de decisões estratégicas na empresa. Al
 2. **Cadastrar de Feedbacks**
     - Navegue até a seção de Feedbacks e clique em "Novo Feedback".
   
-3. **Cadastrar de Ususarios**
-    - Navegue até a seção de Usuarios e clique em "Novo Usuarios".
+3. **Cadastrar de Usuários**
+    - Navegue até a seção de Usuários e clique em "Novo Usuário".
 
 4. **Análise de Sentimentos**
     - Utilize a ferramenta de IA para analisar o sentimento das conversas.
@@ -98,6 +98,12 @@ Contribuindo diretamente para a tomada de decisões estratégicas na empresa. Al
 5. **Gerar Relatórios**
     - Acesse a seção de relatórios para gerar insights detalhados.
 
+## 🎥 Demonstração
+
+[![Assista ao Vídeo](https://img.youtube.com/vi/abc123XYZ/0.jpg)](https://www.youtube.com/watch?v=abc123XYZ)
+
+*Clique na imagem acima para assistir à demonstração do sistema.*
+
 ---
 
-Desenvolvido com ❤️ pela equipe da ExpirenceIA.
+Desenvolvido com ❤️ pela equipe da **ExpirenceIA**.

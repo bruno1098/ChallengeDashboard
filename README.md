@@ -100,7 +100,7 @@ Contribuindo diretamente para a tomada de decisões estratégicas na empresa. Al
 
 ## 🎥 Demonstração
 
-[![Assista ao Vídeo](https://img.youtube.com/vi/abc123XYZ/0.jpg)](https://www.youtube.com/watch?v=abc123XYZ)
+[![Assista ao Vídeo](tumb.png)](https://www.youtube.com/watch?v=SEU_ID_DO_VIDEO)
 
 *Clique na imagem acima para assistir à demonstração do sistema.*
 

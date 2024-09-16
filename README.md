@@ -95,6 +95,9 @@ Contribuindo diretamente para a tomada de decisões estratégicas na empresa. Al
 
 [![Assista ao Vídeo](tumb.png)](https://youtu.be/EfGKGTMATuQ)
 
+## 🚀 Link para acessar o Deploy
+https://challengedashboard.onrender.com/
+
 *Clique na imagem acima para assistir à demonstração do sistema.*
 
 ---

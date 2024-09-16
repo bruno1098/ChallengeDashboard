@@ -3,9 +3,6 @@
 ![Java](https://img.shields.io/badge/Java-✓-blue) ![Oracle](https://img.shields.io/badge/Oracle-✓-orange) ![MVC](https://img.shields.io/badge/Architecture-MVC-green) ![AI](https://img.shields.io/badge/AI-✓-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-![Logo da Plusoft](path/to/your/logo.png)
-
-
 ## 📝 Descrição
 
 Nossa solução é um **sistema completo de monitoramento e análise de feedbacks**, desenvolvido em **Java** com o padrão **MVC**, utilizando o banco de dados **Oracle** para garantir robustez e segurança no armazenamento de informações.
@@ -54,14 +51,13 @@ Contribuindo diretamente para a tomada de decisões estratégicas na empresa. Al
 
 1. **Clone o repositório**
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone https://github.com/bruno1098/ChallengeDashboard.git
     ```
 2. **Navegue até o diretório do projeto**
     ```bash
-    cd seu-repositorio
+    cd ChallengeDashboard
     ```
 3. **Configure o banco de dados Oracle**
-    - Crie as tabelas necessárias conforme o script disponível em `database/schema.sql`.
     - Atualize as credenciais no arquivo `src/main/resources/application.properties`.
 
 4. **Compile o projeto**
@@ -79,7 +75,7 @@ Contribuindo diretamente para a tomada de decisões estratégicas na empresa. Al
     ```
     ou
     ```bash
-    java -jar target/seu-projeto.jar
+    java -jar target/analyzer.jar
     ```
 
 6. **Acesse a aplicação**
@@ -87,14 +83,14 @@ Contribuindo diretamente para a tomada de decisões estratégicas na empresa. Al
 
 ## 🎯 Como Usar
 
-1. **Login**
-    - Acesse a página de login com suas credenciais.
-
-2. **Dashboard**
+1. **Dashboard**
     - Visualize os feedbacks e métricas de desempenho.
 
-3. **Cadastrar Atendimentos**
-    - Navegue até a seção de atendimentos e clique em "Novo Atendimento".
+2. **Cadastrar de Feedbacks**
+    - Navegue até a seção de Feedbacks e clique em "Novo Feedback".
+  
+3. **Cadastrar de Ususarios**
+    - Navegue até a seção de Usuarios e clique em "Novo Usuarios".
 
 4. **Análise de Sentimentos**
     - Utilize a ferramenta de IA para analisar o sentimento das conversas.
@@ -102,48 +98,6 @@ Contribuindo diretamente para a tomada de decisões estratégicas na empresa. Al
 5. **Gerar Relatórios**
     - Acesse a seção de relatórios para gerar insights detalhados.
 
-## 🖼 Capturas de Tela
-
-![Dashboard](path/to/dashboard-screenshot.png)
-*Dashboard interativo com feedbacks organizados.*
-
-![Cadastro de Atendimento](path/to/cadastro-atendimento.png)
-*Interface para cadastro e gerenciamento de atendimentos.*
-
-![Análise de Sentimentos](path/to/analise-sentimentos.png)
-*Ferramenta de análise de sentimentos baseada em IA.*
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
-
-1. **Fork o repositório**
-2. **Crie uma branch para sua feature**
-    ```bash
-    git checkout -b feature/nova-feature
-    ```
-3. **Commit suas alterações**
-    ```bash
-    git commit -m "Adiciona nova feature"
-    ```
-4. **Push para a branch**
-    ```bash
-    git push origin feature/nova-feature
-    ```
-5. **Abra um Pull Request**
-
-## 📄 Licença
-
-Este projeto está licenciado sob a licença [MIT](LICENSE).
-
-## 📞 Contato
-
-**Plusoft - Suporte ao Cliente**
-
-- **Email**: suporte@plusoft.com
-- **LinkedIn**: [Plusoft](https://www.linkedin.com/company/plusoft)
-- **Website**: [www.plusoft.com](https://www.plusoft.com)
-
 ---
 
-Desenvolvido com ❤️ pela equipe da Plusoft.
+Desenvolvido com ❤️ pela equipe da ExpirenceIA.

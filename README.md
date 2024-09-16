@@ -14,3 +14,11 @@ Visualizar métricas de desempenho e qualidade
 Monitorar a satisfação do cliente
 
 Contribuindo diretamente para a tomada de decisões estratégicas na empresa. Além disso, o sistema permite uma análise profunda dos atendimentos, seja via chat ou outros canais, utilizando o poder da nuvem e da automação para melhorar a eficiência das operações da Plusoft.
+
+🛠 Tecnologias Utilizadas
+• Linguagem de Programação: Java
+• Arquitetura: MVC (Model-View-Controller)
+• Banco de Dados: Oracle
+• Inteligência Artificial: Análise de Sentimentos e Chatbot
+• Frontend: [Tecnologias Frontend utilizadas, se aplicável]
+• Hospedagem na Nuvem: [Serviço de nuvem utilizado, se aplicável]
